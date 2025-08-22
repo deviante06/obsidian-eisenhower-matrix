@@ -1,10 +1,11 @@
 {
   "id": "eisenhower-matrix",
   "name": "Eisenhower Matrix",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "minAppVersion": "1.5.0",
-  "description": "Visual Eisenhower Matrix with add/complete/delete, drag & drop (within/between quadrants), scroll, and color theme toggle.",
-  "author": "your-name",
-  "authorUrl": "https://example.com",
+  "description": "Eisenhower Matrix task board: add/complete/delete, drag & drop (within/between quadrants), counters, search, hide completed, clickable Obsidian links, and color toggle.",
+  "author": "Deviante",
+  "authorUrl": "https://github.com/deviante06",
   "isDesktopOnly": false
 }
+
