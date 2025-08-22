@@ -1,0 +1,8 @@
+{
+  "taskFile": "EisenhowerTasks.md",
+  "showCompleted": true,
+  "colorizeQuadrants": true,
+  "enableCounters": true,
+  "enableHideCompletedToggle": true,
+  "enableSearch": true
+}

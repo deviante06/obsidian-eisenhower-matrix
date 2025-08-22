@@ -1,0 +1,10 @@
+{
+  "id": "eisenhower-matrix",
+  "name": "Eisenhower Matrix",
+  "version": "1.2.0",
+  "minAppVersion": "1.5.0",
+  "description": "Visual Eisenhower Matrix with add/complete/delete, drag & drop (within/between quadrants), scroll, and color theme toggle.",
+  "author": "your-name",
+  "authorUrl": "https://example.com",
+  "isDesktopOnly": false
+}

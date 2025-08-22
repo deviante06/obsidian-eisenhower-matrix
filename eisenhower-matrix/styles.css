@@ -1,0 +1,140 @@
+/* Root sizing + scrolling */
+.eisenhower-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.eisenhower-content {
+  height: 100%;
+  overflow: auto; /* общий скролл, если вся матрица не влазит */
+  padding: 8px 0;
+}
+
+/* Grid */
+.eisenhower-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 0 12px 12px 12px;
+}
+
+/* Quadrants */
+.eisenhower-quadrant {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-secondary);
+  min-height: 260px;
+  transition: background 0.2s;
+}
+
+.eisenhower-quadrant.drag-over {
+  outline: 2px dashed var(--interactive-accent);
+}
+
+.eisenhower-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* Add form */
+.add-task-form {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.add-task-form input {
+  flex: 1;
+}
+
+/* Scrollable list INSIDE quadrant */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;             /* отдельный скролл внутри квадранта */
+  max-height: 50vh;           /* регулируй по вкусу */
+  padding-right: 4px;         /* чтоб не прыгал текст при появлении скролла */
+}
+
+/* Cards */
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: var(--background-primary);
+  cursor: grab;
+}
+.task-card.drag-over {
+  outline: 2px dashed var(--interactive-accent);
+}
+.task-card.done span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Optional color scheme (togglable) */
+.eisenhower-view.colorized .q-IU { background: color-mix(in oklab, var(--background-secondary), red 10%); }
+.eisenhower-view.colorized .q-InU { background: color-mix(in oklab, var(--background-secondary), green 10%); }
+.eisenhower-view.colorized .q-nIU { background: color-mix(in oklab, var(--background-secondary), blue 10%); }
+.eisenhower-view.colorized .q-nInU { background: color-mix(in oklab, var(--background-secondary), gray 10%); }
+/* текст задачи как markdown */
+.task-text {
+  flex: 1;
+}
+
+/* чтобы ссылки были визуально заметны */
+.task-text a {
+  text-decoration: underline;
+}
+.drag-handle {
+  cursor: grab;
+  user-select: none;
+  margin-right: 6px;
+  opacity: 0.7;
+}
+.drag-handle:active { cursor: grabbing; }
+
+.task-text { flex: 1; }
+.task-text a { text-decoration: underline; }
+
+/* Остальные стили из предыдущей версии (wrap, quadrant, tasks-list, task-card, .done, .drag-over, цвета и т.п.) */
+/* Top bar */
+.eisenhower-topbar {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 8px 12px 0 12px;
+}
+
+/* Search */
+.em-search {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  flex: 1;
+}
+.em-search input[type="search"] {
+  width: 100%;
+}
+.em-search button {
+  padding: 4px 8px;
+}
+
+/* Controls */
+.em-controls .em-toggle {
+  padding: 4px 8px;
+}
+
+/* Остальные стили из предыдущей версии:
+   .eisenhower-view/.eisenhower-content/.eisenhower-wrap
+   .eisenhower-quadrant(.drag-over) .eisenhower-title
+   .add-task-form, .tasks-list, .task-card(.drag-over/.done)
+   .drag-handle, .task-text, .task-text a, цветовые классы q-*
+*/
+
